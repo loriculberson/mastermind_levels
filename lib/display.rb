@@ -95,5 +95,29 @@ end
   def what_is_your_guess
     "What is your guess?" + prompt_for_answer
   end
+
+  def guess_count_message(guess_count)
+   "Guess #: #{guess_count}.\n".green
+  end
+
+  def lets_go
+    "Let's go!"
+  end
+
+  def whats_your_guess
+    "What's your guess?"
+  end
+
+  def correct_guess
+    "You win! Nice job!"
+  end
+
+  def final_turn_count(turns, e_time)
+    "It took you a total of #{turns} guess(es) and #{e_time} minutes."
+  end
+
+  def perfect_matches()
+    "You have  "
+  end
  
 end

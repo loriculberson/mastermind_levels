@@ -1,10 +1,9 @@
 class CodeMaker
   attr_reader :colors, :secret_code
 
-  def initialize(level)
+  def initialize
     @secret_code = []
-    @colors = colors
-    select_level(level)
+    @colors = []
   end
 
   def select_level(level)
@@ -12,12 +11,11 @@ class CodeMaker
       @colors = ["R","G","Y","B"]
       i = 4
 
-    elsif level == "I" #5 color choices
+    elsif level == "N" #5 color choices
       @colors = ["R","G","Y","B","X"]
       i = 6
 
-    else 
-      level == "A" #6 color choices
+    elsif level == "A" #6 color choices
       @colors = ["R","G","Y","B","X","P"]
       i = 8
     end
@@ -28,6 +26,7 @@ class CodeMaker
     i.times do
       @secret_code << @colors.sample
     end
+      @secret_code
   end
 end
 
