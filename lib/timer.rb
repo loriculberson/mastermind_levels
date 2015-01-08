@@ -1,6 +1,6 @@
 class GameTimer
   
-  def start_the_timer
+  def start_timer
     @start_time = Time.now
   end
 
